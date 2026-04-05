@@ -8,10 +8,10 @@
 /* STOP SCROLLING */
 html, body {
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-/* BASE */
+/* BASE STYLES */
 body {
     font-family: "Helvetica Neue", Arial, sans-serif;
     background: #ffffff;
@@ -28,12 +28,12 @@ header {
     flex-shrink: 0;
 }
 
-    header h1 {
-        font-size: 1rem;
-        letter-spacing: 1px;
-    }
+header h1 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
 
-/* MAIN CONTENT (fills screen) */
+/* MAIN CONTENT */
 main {
     flex: 1;
     display: flex;
@@ -44,83 +44,109 @@ main {
     padding: 20px;
 }
 
-    /* IMAGE */
-    main img {
-        max-width: 400px;
-        height: auto;
-        margin-bottom: 20px;
-    }
+main img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    width: 250px;
+    border: 3px solid #fff;
+    padding: 5px;
+    background: #222;
+}
 
-/* HERO TEXT */
 .hero-text {
     font-size: 2rem;
     font-weight: 600;
     max-width: 800px;
     margin-bottom: 50px;
- 
 }
 
-/* ABOUT */
-.about {
+.about, .contact {
     font-size: 0.9rem;
     color: #444;
     max-width: 600px;
     margin-bottom: 10px;
 }
 
-/* CONTACT */
-.contact {
-    font-size: 0.9rem;
-    color: #444;
-}
-
-/* Overall page */
-body {
-    background-color: #ffffff;
-    color: #111;
-  
-}
-
+/* SIDEBAR */
 .sidebar {
     position: fixed;
     top: 50%;
-    left: 25%; /* move it toward the middle */
+    left: 25%;
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
+.sidebar a {
+    text-decoration: none;
+    color: #111;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
 
-    /* Links look rough + indie */
-    .sidebar a {
-        text-decoration: none;
-        color: #111;
-        font-weight: initial;
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
+.sidebar a:hover {
+    color: #fff;
+    text-decoration: line-through;
+}
 
-        .sidebar a:hover {
-            color: #fff;
-            text-decoration: line-through;
-
-        }
-
-
-/* Main content spacing */
+/* DESKTOP MARGIN */
 main {
     margin-left: 140px;
-    padding: 20px;
 }
 
-/* Image styling (polaroid/grunge feel) */
-img {
-    width: 250px;
-    border: 3px solid #fff;
-    padding: 5px;
-    background: #222;
-  
+/* RESPONSIVE ADJUSTMENTS */
+@media only screen and (max-width: 768px) {
+    /* Sidebar moves to top */
+    .sidebar {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        transform: none;
+        margin-bottom: 15px;
+    }
+
+    .sidebar a {
+        margin: 0 10px;
+    }
+
+    /* Main content full width */
+    main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    /* Adjust hero text and images */
+    .hero-text {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    main img {
+        width: 150px;
+    }
+
+    .about, .contact {
+        font-size: 0.85rem;
+        max-width: 90%;
+    }
+
+    header h1 {
+        font-size: 0.9rem;
+    }
 }
 
+@media only screen and (max-width: 480px) {
+    .hero-text {
+        font-size: 1.2rem;
+    }
+
+    main img {
+        width: 120px;
+    }
+
+    .about, .contact {
+        font-size: 0.8rem;
+    }
 }
