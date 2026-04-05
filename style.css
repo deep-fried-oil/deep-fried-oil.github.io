@@ -1,0 +1,126 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* STOP SCROLLING */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* BASE */
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #ffffff;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    background: #bc93fa;
+    text-align: center;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+    header h1 {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+/* MAIN CONTENT (fills screen) */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+    /* IMAGE */
+    main img {
+        max-width: 400px;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+/* HERO TEXT */
+.hero-text {
+    font-size: 2rem;
+    font-weight: 600;
+    max-width: 800px;
+    margin-bottom: 50px;
+ 
+}
+
+/* ABOUT */
+.about {
+    font-size: 0.9rem;
+    color: #444;
+    max-width: 600px;
+    margin-bottom: 10px;
+}
+
+/* CONTACT */
+.contact {
+    font-size: 0.9rem;
+    color: #444;
+}
+
+/* Overall page */
+body {
+    background-color: #ffffff;
+    color: #111;
+  
+}
+
+.sidebar {
+    position: fixed;
+    top: 50%;
+    left: 25%; /* move it toward the middle */
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+    /* Links look rough + indie */
+    .sidebar a {
+        text-decoration: none;
+        color: #111;
+        font-weight: initial;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+        .sidebar a:hover {
+            color: #fff;
+            text-decoration: line-through;
+
+        }
+
+
+/* Main content spacing */
+main {
+    margin-left: 140px;
+    padding: 20px;
+}
+
+/* Image styling (polaroid/grunge feel) */
+img {
+    width: 250px;
+    border: 3px solid #fff;
+    padding: 5px;
+    background: #222;
+  
+}
+
+}
